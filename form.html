@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        form {
+            max-width: 580px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+
+        .icon {
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+<form method="POST">
+        <div class="form-group"><img src="avtomobil.png" alt="Car Icon" class="icon">
+            <label>Данные автомобиля</label>
+            <label>
+                
+                 №Тех. паспорта
+            </label>
+            <input type="text" id="carData" name="carData" placeholder="Пр. 20003434"required>
+        </div>
+        <div>
+            <input type="checkbox" name="chek_one" />
+            <label>Отсутсвует/Не хочу входить</label>
+          </div>
+
+        <div class="form-group">
+            <label>
+                <img src="person.png" alt="Person Icon" class="icon"> <label>Данные о человеке</label>  
+            </label>
+            <label>IDNP/IDNO</label>
+            <input type="text" id="personData" name="personData" placeholder="Пр. 20034343" required>
+        </div>
+        <div>
+            <input type="checkbox" name="chek_two" />
+            <label>Отсутсвует/Не хочу входить</label>
+          </div>
+
+          <div>
+          <label>Место регистрации*</label>
+          <input type="text" name="registration_place" value="Moldova" required>
+          <input type="checkbox" name="abroad" />
+            <label>За границей</label>
+        </div>
+    <label>Тип транспорта</label>
+        <select name="type-transport">
+            <option value="">Выберите</option>
+            <option value="dog">Легковой автомобиль</option>
+            <option value="cat">Автобус/Микроавтобус</option>
+            <option value="hamster">Трактор</option>
+            <option value="parrot">Грузовой автомобиль</option>
+            <option value="spider">Мотоцикл</option>
+          </select>
+          
+
+          </div>
+        <button type="submit">Отправить</button>
+    </form>
+</body>
+</html>
