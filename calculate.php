@@ -279,10 +279,145 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                 $step_5 = $step_4 * 2.5;
                             }
                         }
-                        echo $step_5;
+                        $result=$step_5;
+                        echo $result;
                     }
-
+//Не гражданин Молдовы
     else{
-        $step_1=$CONST*3;}
-}
+        $step_1=$CONST*3;
+
+        //Владелец транспорта явлвяется лицом
+        if($owner=="fiz"){
+            $step_2=$step_1*0.9;
+        }
+        else{
+            $step_2=$step_1*1.5;
+        }
+
+        //Срок действия страховки
+        if($validly_period==1){
+            $step_3=$step_2*0.2;
+        }
+        elseif($validly_period==2){
+            $step_3=$step_2*0.3;
+        }
+        elseif($validly_period==3){
+            $step_3=$step_2*0.4;
+        }
+        elseif($validly_period==4){
+            $step_3=$step_2*0.5;
+        }
+        elseif($validly_period==5){
+            $step_3=$step_2*0.6;
+        }
+        elseif($validly_period==6){
+            $step_3=$step_2*0.7;
+        }
+        elseif($validly_period==7){
+            $step_3=$step_2*0.8;
+        }
+        elseif($validly_period==8){
+            $step_3=$step_2*0.85;
+        }
+        elseif($validly_period==9){
+            $step_3=$step_2*0.9;
+        }
+
+        else{
+            $step_3=$step_2*1;
+                //Класс транспортного средства
+                if($transport_class=="electro"){
+                    $step_4=$step_3*0.9;
+                }
+                else if($transport_class=="car"){
+                    switch(true){
+                        case ($engine_car<=1200):
+                            $step_4=$step_3*0.7;
+                            break;
+                        case($engine_car>1200 && $engine_car<=1600):
+                            $step_4=$step_3*1;
+                            break;
+                        case($engine_car>1600 && $engine_car<=2000):
+                            $step_4=$step_3*1.1;
+                            break;
+                        case($engine_car>2000 && $engine_car<=2400):
+                            $step_4=$step_3*1.2;
+                            break;
+                        case($engine_car>2400 && $engine_car<=3000):
+                            $step_4=$step_3*1.5;
+                            break;
+                        case($engine_car>3000):
+                            $step_4=$step_3*3;
+                            break;
+                        default:
+                        echo"Problems car...";
+                    }
+                }
+                else if($transport_class=="motorbike"){
+                    switch(true){
+                        case ($engine_motorbike<=300):
+                            $step_4=$step_3*0.3;
+                            break;
+                        case($engine_motorbike>300):
+                            $step_4=$step_3*0.5;
+                            break;
+                        default:
+                        echo"Problems motorbike";
+                    }
+                }
+                else if($transport_class=="tractor"){
+                    switch(true){
+                        case ($engine_tractor<=45):
+                            $step_4=$step_3*0.5;
+                            break;
+                        case($engine_tractor>45 && $engine_tractor<=100):
+                            $step_4=$step_3*0.7;
+                            break;
+                        case($engine_tractor>100):
+                            $step_4=$step_3*0.9;
+                            break;
+                        default:
+                        echo"Problems tractor";
+                }
+                }
+                else if($transport_class=="track"){
+                    switch(true){
+                        case ($weight<=3500):
+                            $step_4=$step_3*1.5;
+                            break;
+                        case($weight>3500 && $weight<=7500):
+                            $step_4=$step_3*1.7;
+                            break;
+                        case($weight>7500 && $weight<=16000):
+                            $step_4=$step_3*2;
+                            break;
+                        case($weight>16000):
+                            $step_4=$step_3*2.5;
+                            break;
+                        default:
+                        echo"Problems track";
+                }
+                }
+                else if($transport_class=="bus"){
+                    switch(true){
+                        case($seats<=17):
+                            $step_4=$step_3*1.5;
+                            break;
+                        case($seats>17 && $seats<30):
+                            $step_4=$step_3*2;
+                            break;
+                        case($seats>30):
+                            $step_4=$step_3*2.2;
+                            break;
+                        default:
+                        echo"Problems bus";
+                    }
+                }
+                $result=$step_4;
+                echo $result;
+                
+            }
+        }
+    }
+                
 
