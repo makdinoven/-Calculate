@@ -1,0 +1,37 @@
+.form {
+
+    &__block {
+        padding: 20px 25px 25px;
+        margin-bottom: 20px;
+        &_title {
+            display: flex;
+            width: 180px;
+            justify-content: space-around;
+            align-items: center;
+            .car {
+                height: 25px;
+            }
+            .title {
+                font-size: 16px;
+                font-weight: 700;
+            }
+        }
+        &-number {
+            font-size: 14px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        &_input {
+            position: relative;
+            .number {
+                width: 275px;
+                height: 48px;
+                border-radius: 5px;
+            }
+            .none {
+                display: none;
+            }
+
+        }
+    }
+}
