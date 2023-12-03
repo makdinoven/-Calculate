@@ -3,11 +3,13 @@
     padding: 0;
     box-sizing:border-box;
     text-decoration: none;
-    background-color: #f7ecec;
+    // background-color: #f7ecec;
 }
 .container {
     width: 630px;
     margin: 0 auto;
 }
 
-@import 'blocks/form';
+@import 'blocks/forms';
+
+

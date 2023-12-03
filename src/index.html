@@ -65,8 +65,45 @@
     </form>
 </body>
 </html> --> 
-
 <!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+    <div class="container">
+        <form method="POST" action="calculate.php" onsubmit="return validateForm()">
+            <div class="form">
+                <div class="form__mini" id="formMini">
+                    <div class="form__mini_title">
+                        <img class="car" src="image/avtomobil.png" alt="car">
+                        <div>Данные автомобиля</div>
+                    </div>
+                    <div>№ техпаспорта</div>
+                    <div class="input">
+                        <input type="number" id="carData" name="carData" placeholder="Пр. 20003434" required>
+                        <input action="default_value.php" type="checkbox" id="chekOne" name="chek_one" onclick="toggleInput()">
+                        <label>Отсутсвует/Не хочу входить</label>
+                    </div>
+                </div>
+                
+                <button type="button">рассчитать</button>
+            </div>
+        </form>
+        
+        
+    </div>
+</body>
+<link rel="stylesheet" href="js/script.js">
+</html>
+
+
+
+
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -115,9 +152,11 @@
                     <label>Отсутсвует/Не хочу входить</label>        
             </div>
             </div>
-            <button type="submit">Отправить</button>
+            
         </form>
+        <button class="ras">Расчитать</button>
     </div>
     
 </body>
-</html>
+</html> -->
+
