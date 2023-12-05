@@ -157,3 +157,7 @@ $hover-image-url: 'path/to/your/image.png'; // Замените на путь к
 .input_dop {
 flex-direction: column;
 }
+#additionalInput {
+    display: none;
+    margin-top: 10px;
+  }

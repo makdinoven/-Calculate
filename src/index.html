@@ -38,16 +38,62 @@
                             <label>За границей</label>
                         </div>
                         <div>Тип транспорта</div>
-                        <select name="type-transport">
+                        <select name="type-transport" id="transport" onchange="showInput()">
                             <option value="">Выберите</option>
-                            <option value="dog">Легковой автомобиль</option>
-                            <option value="cat">Автобус/Микроавтобус</option>
-                            <option value="hamster">Трактор</option>
-                            <option value="parrot">Грузовой автомобиль</option>
-                            <option value="spider">Мотоцикл</option>
+                            <option value="car">Легковой автомобиль</option>
+                            <option value="bus">Автобус/Микроавтобус</option>
+                            <option value="tractor">Трактор</option>
+                            <option value="truck">Грузовой автомобиль</option>
+                            <option value="motorcycle">Мотоцикл</option>
                           </select>
+
+                          <div id="carInput" style="display: none;">
+                            <div>
+                                <div>Объём двигателя (см3)</div>
+                                <input type="number" id="carData" name="carData" placeholder="Пр. 20003434" required>
+                            </div>
+                            <div>
+                                <div>Разрешенная максимальная масca (кг)</div>
+                                <input type="number" id="carData" name="carData" placeholder="Пр. 20003434" required>
+                            </div>
+                            <div>
+                                <input action="default_value.php" type="checkbox" id="chekOne" name="chek_one">
+                                <label>тесла</label>
+                            </div>
+                          </div>
+                          <div id="busInput" style="display: none;">
+                            <div>
+                                <div>Количество мест</div>
+                                <input type="number" id="carData" name="carData" placeholder="Пр. 20003434" required>
+                            </div>
+                            <div>
+                                <div>Разрешенная максимальная масca (кг)</div>
+                                <input type="number" id="carData" name="carData" placeholder="Пр. 20003434" required>
+                            </div>
+                            
+                          </div>
+                          <div id="tractorInput" style="display: none;">
+                            <div>
+                                <div>Мощность двигателя</div>
+                                <input type="number" id="carData" name="carData" placeholder="Пр. 20003434" required>
+                            </div>
+                          </div>
+                          <div id="truckInput" style="display: none;">
+                            <div>
+                                <div>Общая масса</div>
+                                <input type="number" id="carData" name="carData" placeholder="Пр. 20003434" required>
+                            </div>
+                          </div>
+                          <div id="motorcycleInput" style="display: none;">
+                            <div>
+                                <div>Объём двигателя (см3)</div>
+                                <input type="number" id="carData" name="carData" placeholder="Пр. 20003434" required>
+                            </div>
+                           
+                          </div>
+
                         </div>
-                </div>
+                        </div>
                 <div class="form__mini" id="formMini">
                     <div class="form__mini_title">
                         <img class="car" src="image/user.png" alt="car">
@@ -86,7 +132,7 @@
                         <div class="f1">
                             <div class="input_dop" id="additionalInputa" style="display: none;">Опыт вождения владельца:</div>
                             <select class="input_dop" style="display: none;" name="type-transport">
-                                <option value="">Выберите</option>
+                                <option  value="">Выберите</option>
                                 <option value="dog">до 1 года</option>
                                 <option value="cat">1 год</option>
                                 <option value="cat">2 года</option>
