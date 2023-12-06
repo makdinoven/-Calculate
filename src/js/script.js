@@ -1,6 +1,6 @@
 const checkbox = document.getElementById('chekOne');
-        const inputField = document.getElementById('carData');
-        const style = document.getElementsByClassName('img');
+const inputField = document.getElementById('carData');
+const style = document.getElementsByClassName('img');
         // Обработчик события изменения состояния чекбокса
         checkbox.addEventListener('change', function() {
           // Изменяем состояние атрибута readonly в зависимости от состояния чекбокса
@@ -16,7 +16,7 @@ const checkbox = document.getElementById('chekOne');
           }
           
         }); 
-const checkboxs = document.getElementById('cheksecond');
+const checkboxs = document.getElementById('chekSecond');
 const inputFields = document.getElementById('carDates');
 const styles = document.getElementsByClassName('imgs');
 checkboxs.addEventListener('changes', function() {
