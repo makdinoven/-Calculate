@@ -1,11 +1,39 @@
 const checkbox = document.getElementById('chekOne');
         const inputField = document.getElementById('carData');
-    
+        const style = document.getElementsByClassName('img');
         // Обработчик события изменения состояния чекбокса
         checkbox.addEventListener('change', function() {
           // Изменяем состояние атрибута readonly в зависимости от состояния чекбокса
-          inputField.readOnly = checkbox.checked;
+          if(checkbox.checked) {
+            inputField.readOnly = checkbox.checked;
+          for (let i = 0; i < style.length; i++) {
+            style[i].style.cursor = ' not-allowed';
+          }
+          } else {
+            for (let i = 0; i < style.length; i++) {
+              style[i].style.cursor = 'text';
+            }
+          }
+          
         }); 
+const checkboxs = document.getElementById('cheksecond');
+const inputFields = document.getElementById('carDates');
+const styles = document.getElementsByClassName('imgs');
+checkboxs.addEventListener('changes', function() {
+    if(checkboxs.checked) {
+        inputFields.readOnly = checkboxs.checked;
+        for (let i = 0; i < styles.length; i++) {
+            styles[i].style.cursor = 'not-allowed';
+        } 
+    } else {
+        for (let i = 0; i < styles.length; i++) {
+            styles[i].style.cursor = 'text';
+        }
+    }
+});
+      
+
+
 function expandFormMini() {
     let visible = document.getElementsByClassName('input_dop');
     let nones = document.getElementsByClassName('none');
