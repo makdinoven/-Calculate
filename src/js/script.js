@@ -53,7 +53,6 @@ function showInput() {
         motorcycleInput.style.display = "block";
         break;
       default:
-        // Действия по умолчанию или для других значений
         break;
     }
   }

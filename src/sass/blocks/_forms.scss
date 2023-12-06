@@ -156,8 +156,39 @@ $hover-image-url: 'path/to/your/image.png'; // Замените на путь к
 
 .input_dop {
 flex-direction: column;
+
+
+	select {
+		padding: 8px;
+        border: 1px solid $input-border-color;
+        border-radius: 5px;
+        margin-right: 5px;
+        transition: border-color 0.3s;
+		
+	}
+	.class {
+		padding: 8px;
+        border: 1px solid $input-border-color;
+        border-radius: 5px;
+        margin-right: 5px;
+        transition: border-color 0.3s;
+	}
 }
 #additionalInput {
     display: none;
     margin-top: 10px;
   }
+.clas {
+	padding: 8px;
+        border: 1px solid $input-border-color;
+        border-radius: 5px;
+        margin-right: 5px;
+        transition: border-color 0.3s;
+}
+.date {
+	padding: 8px;
+        border: 1px solid $input-border-color;
+        border-radius: 5px;
+        margin-right: 5px;
+        transition: border-color 0.3s;
+}
