@@ -8,36 +8,71 @@ const style = document.getElementsByClassName('img');
             inputField.readOnly = checkbox.checked;
           for (let i = 0; i < style.length; i++) {
             style[i].style.cursor = ' not-allowed';
+            style[i].style.background= ' #4285f4';
+            // style[i].style.opacity= ' 0.5';
+
           }
           } else {
+            inputField.readOnly = false;
             for (let i = 0; i < style.length; i++) {
               style[i].style.cursor = 'text';
+              style[i].style.background= ' #fff';
             }
           }
           
         }); 
-const checkboxs = document.getElementById('chekSecond');
-const inputFields = document.getElementById('carDates');
-const styles = document.getElementsByClassName('imgs');
-checkboxs.addEventListener('changes', function() {
-    if(checkboxs.checked) {
-        inputFields.readOnly = checkboxs.checked;
-        for (let i = 0; i < styles.length; i++) {
-            styles[i].style.cursor = 'not-allowed';
-        } 
-    } else {
-        for (let i = 0; i < styles.length; i++) {
-            styles[i].style.cursor = 'text';
-        }
-    }
-});
-      
+function toggleInput() {
+    const carDatesInput = document.getElementById("carDates");
+    const chekSecondCheckbox = document.getElementById("chekSecond");
+    const styles = document.getElementsByClassName('imgs');
+        
+            // Если checkbox отмечен, устанавливаем атрибут readonly, иначе снимаем его
+            if (chekSecondCheckbox.checked) {
+                carDatesInput.readOnly = chekSecondCheckbox.checked;
+                for (let i = 0; i < styles.length; i++) {
+                    styles[i].style.cursor = ' not-allowed';
+                    styles[i].style.background= ' #4285f4';
+                }
+            } else {
+                carDatesInput.readOnly = false;
+                for (let i = 0; i < styles.length; i++) {
+                    styles[i].style.cursor = 'text';
+                    styles[i].style.background= ' #fff';
+                }
+            }
+            
+          };
+
 
 
 function expandFormMini() {
     let visible = document.getElementsByClassName('input_dop');
     let nones = document.getElementsByClassName('none');
+    const styles = document.getElementsByClassName('imgs');
+    const style = document.getElementsByClassName('img');
+    const inputField = document.getElementById('carData');
+    const carDatesInput = document.getElementById("carDates");
+    const button = document.getElementsByClassName('button_none')
+    const submit = document.getElementsByClassName('submit');
 
+    inputField.readOnly = true;
+    carDatesInput.readOnly = true;    
+
+    for (let i = 0; i < button.length; i++) {
+        button[i].style.display = 'none';
+        submit[i].style.display = 'flex';
+    }
+
+    for (let i = 0; i < styles.length; i++) {
+        styles[i].style.cursor = ' not-allowed';
+        styles[i].style.background= ' #4285f4';
+    }
+    for (let i = 0; i < style.length; i++) {
+        style[i].style.cursor = ' not-allowed';
+        style[i].style.background= ' #4285f4';
+        // style[i].style.opacity= ' 0.5';
+
+      }
 
     for (var i = 0; i < nones.length; i++) {
         nones[i].style.display = 'none';
@@ -56,6 +91,8 @@ function showInput() {
     var truckInput = document.getElementById("truckInput");
     var motorcycleInput = document.getElementById("motorcycleInput");
 
+
+  
     // Скрыть все input поля
     carInput.style.display = "none";
     busInput.style.display = "none";
@@ -67,18 +104,24 @@ function showInput() {
     switch (select.value) {
       case "car":
         carInput.style.display = "block";
+        select.style.background= ' #4285f4';
         break;
       case "bus":
         busInput.style.display = "block";
+        select.style.background= ' #4285f4';
         break;
       case "tractor":
         tractorInput.style.display = "block";
+        select.style.background= ' #4285f4';
         break;
       case "truck":
         truckInput.style.display = "block";
+        select.style.background= ' #4285f4';
         break;
       case "motorcycle":
         motorcycleInput.style.display = "block";
+        select.style.background= ' #4285f4';
+
         break;
       default:
         break;
