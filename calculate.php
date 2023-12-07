@@ -3,9 +3,9 @@ $CONST= 1350;
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $passport=$_POST["passport"];
     $idnp_idno=$_POST["indp_idno"];
-    $area = $_POST["area"];
-    $owner = $_POST["fiz/ur_lico"];
-    $registration=$_POST["mesto_registracii"];
+    $area = $_POST["place_reg"];
+    $owner = $_POST["owner"];
+    $registration="Kishineu";
     $validly_period=$_POST["validly_period"];
     $transport_class=$_POST["transport_class"];
     $engine_car=$_POST["engine_car"];
@@ -13,9 +13,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $driver_expirience=$_POST["driver_expirience"];
     $number_accisent=$_POST["number_accisent"];
     $dtpCount=$_POST["dtpCount"];
+    $seats=$_POST["seats"];
+    $engine_tractor=$_POST["engine_tractor"];
+    $engine_motorbike=$_POST["engine_motorbike"];
+    $weight=$_POST["weight"];
 
 //Выбор места регистрации
-    if($area=="Moldova"){
+    if($area=="MD"){
         //Неограниченное кол-во допускаемых
         $step_1=$CONST*1.2;
         //Владелец транспорта явлвяется лицом
