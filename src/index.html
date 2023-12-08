@@ -40,7 +40,7 @@
                         <div>Тип транспорта</div>
                         <select name="transport_class" id="transport" onchange="showInput()">
                             <option value="">Выберите</option>
-                            <option value="car">Легковой автомобиль</option>
+                            <option id="card" value="car">Легковой автомобиль</option>
                             <option value="bus">Автобус/Микроавтобус</option>
                             <option value="tractor">Трактор</option>
                             <option value="track">Грузовой автомобиль</option>
@@ -92,12 +92,13 @@
                     </div>
                     
                     <div class="input">
-                        <div class="fl">
-                            <div>IDNP/ IDNO</div>
+                        
                             <input class="imgs" type="number" id="carDates" name="carData" placeholder="Пр. 20003434" required>
-                        </div>
-                        <input class="none" action="default_value.php" type="checkbox" id="chekSecond" name="chek_one" onclick="toggleInput()">
-                        <label class="none">Отсутсвует/Не хочу входить</label>
+                            <input class="none" action="default_value.php" type="checkbox" id="chekSecond" name="chek_one" onclick="toggleInput()">
+                            <label class="none">Отсутсвует/Не хочу входить</label>
+                        
+                        <!-- <input class="none" action="default_value.php" type="checkbox" id="chekSecond" name="chek_one" onclick="toggleInput()">
+                        <label class="none">Отсутсвует/Не хочу входить</label> -->
                        <div class="fl"> 
                             <div class="input_dop" id="additionalInputa" style="display: none;">Владелец транспортного средства является</div>
                             <select class="input_dop clas" style="display: none;" name="owner">
@@ -158,8 +159,9 @@
                 
                     
                 
-                <button type="submit" name="send-form" value="ebash"></button>
-                <button type="button" onclick="expandFormMini()">рассчитать</button>
+                
+                <button class="button_none" type="submit" disabled="true" onclick="expandFormMini()">рассчитать</button>
+                <button class="submit" style="display: none;" type="submit">рассчитать</button>
             </div>
         </form>
         
