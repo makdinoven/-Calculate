@@ -1,0 +1,126 @@
+.form {
+    background: #d8cccc;
+    border-radius: 10px;
+    padding: 20px;
+    &__mini {
+        background: #b6a0db;
+        border-radius: 10px;
+        padding: 20px;
+        margin-bottom: 20px;
+        .none {
+            display: none;
+        }
+        .title {
+            display: flex;
+            align-items: center;
+            &_img {
+                height: 30px;
+                margin-right: 10px;
+            }
+            &_text {
+                font-size: 18px;
+                font-weight: 700;
+            }
+        }
+        .input {
+            display: flex;
+            position: relative;
+            #placeReg {
+                cursor: not-allowed;
+            }
+            &__number {
+                #face {
+                    padding: 8px;
+                    border: 1px solid;
+                    border-radius: 5px;
+                    margin-right: 5px;
+                    transition: border-color 0.3s;
+                    width: 187px;
+                }
+                #age {
+                    padding: 8px;
+                    border: 1px solid;
+                    border-radius: 5px;
+                    margin-right: 5px;
+                    transition: border-color 0.3s;
+                    width: 187px;
+                }
+                #date {
+                    padding: 8px;
+                    border: 1px solid;
+                    border-radius: 5px;
+                    margin-right: 5px;
+                    transition: border-color 0.3s;
+                    width: 187px;
+                }
+                #DTP {
+                    padding: 8px;
+                    border: 1px solid;
+                    border-radius: 5px;
+                    margin-right: 5px;
+                    transition: border-color 0.3s;
+                    width: 187px;
+                }
+                #countrySelect {
+                    display: none;
+                    width: 187px;
+                }
+                #passport:hover + #imgPass {
+                    display: inline-block;
+                }
+                &_text {
+                    margin-bottom: 5px;
+                    margin-top: 10px;
+                }
+                input::-webkit-outer-spin-button,
+                input::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+                }
+                &_input {
+                    padding: 8px;
+                    border: 1px solid;
+                    border-radius: 5px;
+                    margin-right: 5px;
+                    transition: border-color 0.3s;
+                    
+                }
+                &_none {
+                    position: absolute;
+                    display: none;
+                    height: 150px;
+                    right: 600px;
+                    bottom: -40px;
+                    
+                }
+            }
+            &__check {
+                display: flex;
+                align-items: center;
+                transform: translateY(25%);
+                &_box {
+                    width: 40px;
+                }
+            }
+        }
+        .avto {
+            &__select {
+                width: 187px;
+                padding: 8px;
+                border: 1px solid;
+                border-radius: 5px;
+                margin-right: 5px;
+                transition: border-color 0.3s;
+            }
+            &__none {
+                display: none;
+            }
+        }
+    }
+    .button {
+        background: #b6a0db;
+        border-radius: 5px;
+        width: 100%;
+        height: 30px;
+    }
+}
