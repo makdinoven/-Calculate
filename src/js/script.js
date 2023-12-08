@@ -1,129 +1,144 @@
-const checkbox = document.getElementById('chekOne');
-const inputField = document.getElementById('carData');
-const style = document.getElementsByClassName('img');
-        // Обработчик события изменения состояния чекбокса
-        checkbox.addEventListener('change', function() {
-          // Изменяем состояние атрибута readonly в зависимости от состояния чекбокса
-          if(checkbox.checked) {
-            inputField.readOnly = checkbox.checked;
-          for (let i = 0; i < style.length; i++) {
-            style[i].style.cursor = ' not-allowed';
-            style[i].style.background= ' #4285f4';
-            // style[i].style.opacity= ' 0.5';
+const inputPass = document.getElementById('passport');
+const checkPass = document.getElementById('checkPass');
+const btnFirst = document.getElementById('btnFirst');
+const allForm = document.getElementsByClassName('none');
+const country = document.getElementById('anotherCountry');
+const checkNone = document.getElementById('checkNone');
+const checkCountry = document.getElementById('checkCountry');
+const countryReg = document.getElementById('placeReg');
+const countrySelect = document.getElementById('countrySelect');
+const inputIdnp = document.getElementById('IDNP');
+const person = document.getElementById('anotherPerson');
+const checkIdnp = document.getElementById('checkIdnp');
+const btnSecond = document.getElementById('btnSecond');
 
-          }
-          } else {
-            inputField.readOnly = false;
-            for (let i = 0; i < style.length; i++) {
-              style[i].style.cursor = 'text';
-              style[i].style.background= ' #fff';
-            }
-          }
-          
-        }); 
-function toggleInput() {
-    const carDatesInput = document.getElementById("carDates");
-    const chekSecondCheckbox = document.getElementById("chekSecond");
-    const styles = document.getElementsByClassName('imgs');
+
+
+function updateButtonState() {
+   
+
+    if ((inputPass.value === "" && !checkPass.checked)  || (inputIdnp.value ==="" && !checkIdnp.checked)) {
+        btnFirst.disabled = true;
+        btnFirst.style.cursor = 'not-allowed';
+    } else {
+        btnFirst.disabled = false;
+        btnFirst.style.cursor = 'auto'
+    }
+}
+
+document.getElementById("passport").addEventListener("input", updateButtonState);
+document.getElementById("checkPass").addEventListener("change", updateButtonState);
+document.getElementById('IDNP').addEventListener('inputs', updateButtonState);
+document.getElementById('checkIdnp').addEventListener('changes', updateButtonState);
+
+checkCountry.addEventListener('change', updateCountry);
+countryReg.addEventListener('input', updateCountry);
+
+function updateCountry() {
+    if (checkCountry.checked) {
+        countryReg.disabled = false;
+        countryReg.classList.remove('disabled');
+        countryReg.style.cursor = 'auto';
+        countrySelect.style.display = 'block';
+        countryReg.style.display = 'none';
+
+    } else {
+        countryReg.disabled = true;
+        countryReg.classList.add('disabled');
+        countryReg.style.cursor = 'not-allowed';
+        countrySelect.style.display = 'none';
+        countryReg.style.display = 'block';
+    }
+}
+
+checkPass.addEventListener('change', updateElements);
+inputPass.addEventListener('input', updateElements);
+inputIdnp.addEventListener('input', updateElement);
+checkIdnp.addEventListener('change', updateElement);
+
+function updateElement() {
+    if (checkIdnp.checked ) {
+        inputIdnp.disabled = true;
+        inputIdnp.classList.add('disabled'); 
+        inputIdnp.style.cursor = 'not-allowed';
         
-            // Если checkbox отмечен, устанавливаем атрибут readonly, иначе снимаем его
-            if (chekSecondCheckbox.checked) {
-                carDatesInput.readOnly = chekSecondCheckbox.checked;
-                for (let i = 0; i < styles.length; i++) {
-                    styles[i].style.cursor = ' not-allowed';
-                    styles[i].style.background= ' #4285f4';
-                }
-            } else {
-                carDatesInput.readOnly = false;
-                for (let i = 0; i < styles.length; i++) {
-                    styles[i].style.cursor = 'text';
-                    styles[i].style.background= ' #fff';
-                }
-            }
-            
-          };
+    } else {
+        inputIdnp.disabled = false;
+        inputIdnp.classList.remove('disabled'); 
+        inputIdnp.style.cursor = 'auto';
+    }  
+}
+
+function updateElements() {
+
+    if (checkPass.checked ) {
+        inputPass.disabled = true;
+        inputPass.classList.add('disabled'); 
+        inputPass.style.cursor = 'not-allowed';
+        
+    } else {
+        inputPass.disabled = false;
+        inputPass.classList.remove('disabled'); 
+        inputPass.style.cursor = 'auto';
+    }    
+}
 
 
 
-function expandFormMini() {
-    let visible = document.getElementsByClassName('input_dop');
-    let nones = document.getElementsByClassName('none');
-    const styles = document.getElementsByClassName('imgs');
-    const style = document.getElementsByClassName('img');
-    const inputField = document.getElementById('carData');
-    const carDatesInput = document.getElementById("carDates");
-    const button = document.getElementsByClassName('button_none')
-    const submit = document.getElementsByClassName('submit');
+function openAllForm() {
 
-    inputField.readOnly = true;
-    carDatesInput.readOnly = true;    
+    inputPass.disabled = true;
+    inputPass.classList.add('disabled'); 
+    inputPass.style.cursor = 'not-allowed';  
+    imgPass.style.display = 'none';
+    checkNone.style.display = 'none';
 
-    for (let i = 0; i < button.length; i++) {
-        button[i].style.display = 'none';
-        submit[i].style.display = 'flex';
+    for (let i = 0; i < allForm.length; i++) {
+        allForm[i].style.display = 'block';
     }
 
-    for (let i = 0; i < styles.length; i++) {
-        styles[i].style.cursor = ' not-allowed';
-        styles[i].style.background= ' #4285f4';
-    }
-    for (let i = 0; i < style.length; i++) {
-        style[i].style.cursor = ' not-allowed';
-        style[i].style.background= ' #4285f4';
-        // style[i].style.opacity= ' 0.5';
-
-      }
-
-    for (var i = 0; i < nones.length; i++) {
-        nones[i].style.display = 'none';
-    }
-    for (var i = 0; i < visible.length; i++) {
-        visible[i].style.display = 'flex';
-    }
+    if(checkPass.checked) {
+        country.style.display = 'none';
+    };
+    if (checkIdnp.checked) {
+        person.style.display = 'none';
+    };
+    btnFirst.style.display = 'none';
+    btnSecond.style.display = 'block';
 
 }
 
 function showInput() {
-    var select = document.getElementById("transport");
-    var carInput = document.getElementById("carInput");
-    var busInput = document.getElementById("busInput");
-    var tractorInput = document.getElementById("tractorInput");
-    var truckInput = document.getElementById("truckInput");
-    var motorcycleInput = document.getElementById("motorcycleInput");
+    const select = document.getElementById('avtoSelect');
+    const cars = document.getElementById('carsInput');
+    const bus = document.getElementById('busInput');
+    const tractor = document.getElementById('tractorInput');
+    const cargo = document.getElementById('cargoInput');
+    const bike = document.getElementById('bikeInput');
 
+    cars.style.display = 'none';
+    bus.style.display = 'none';
+    tractor.style.display = 'none';
+    cargo.style.display = 'none';
+    bike.style.display = 'none';
 
-  
-    // Скрыть все input поля
-    carInput.style.display = "none";
-    busInput.style.display = "none";
-    tractorInput.style.display = "none";
-    truckInput.style.display = "none";
-    motorcycleInput.style.display = "none";
-
-    // Показать соответствующее input поле в зависимости от выбранной опции
     switch (select.value) {
-      case "car":
-        carInput.style.display = "block";
-        select.style.background= ' #4285f4';
-        break;
-      case "bus":
-        busInput.style.display = "block";
-        select.style.background= ' #4285f4';
-        break;
-      case "tractor":
-        tractorInput.style.display = "block";
-        select.style.background= ' #4285f4';
-        break;
-      case "truck":
-        truckInput.style.display = "block";
-        select.style.background= ' #4285f4';
-        break;
-      case "motorcycle":
-        motorcycleInput.style.display = "block";
-        select.style.background= ' #4285f4';
-
-        break;
-      default:
-        break;
+        case 'car':
+            cars.style.display = 'block';
+            break;
+        case 'bus':
+            bus.style.display = 'block';
+            break;
+        case 'tractor':
+            tractor.style.display = 'block';
+            break;
+        case 'truck':
+            cargo.style.display = 'block';
+            break;
+        case 'motobike':
+            bike.style.display = 'block';
+            break;
+        default:
+            break;
     }
-  }
+}
