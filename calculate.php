@@ -3,8 +3,8 @@ $CONST= 1350;
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $passport=$_POST["passport"];
     $idnp_idno=$_POST["indp_idno"];
-    $area = $_POST["place_reg"];
-    $owner = $_POST["owner"];
+    $area = $_POST["country"];
+    $owner = $_POST["face"];
     $registration="Kishineu";
     $validly_period=$_POST["validly_period"];
     $transport_class=$_POST["transport_class"];

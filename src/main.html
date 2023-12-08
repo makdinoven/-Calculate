@@ -32,7 +32,7 @@
                                 <div class="input__number_text">место регистрации</div>
                                 <input id="placeReg" class="input__number_input" type="text" name="place_reg" value="MD - Republica Moldova" disabled required>
                                 <select class="avto__select" name="country" id="countrySelect">
-                                    <option value="">ABW  Аруба</option>
+                                    <option value="MD">Тестовая</option>
                                     <option value="AFG">Афганистан</option>
                                     <option value="AGO">Ангола</option>
                                     <option value="AIA">Ангилья</option>
@@ -287,7 +287,7 @@
                         <div class="avto">
                             <div class="avto__number">
                                 <div class="input__number_text">Тип транспорта:</div>
-                                <select class="avto__select" name="transport" id="avtoSelect" onchange="showInput()">
+                                <select class="avto__select" name="transport_class" id="avtoSelect" onchange="showInput()">
                                     <option value disabled selected>Выберете</option>
                                     <option value="car">Легковой автомобиль</option>
                                     <option value="bus">Автобус/Микроавтобус</option>
@@ -301,31 +301,31 @@
                         <div class="avto__none" id="carsInput">
                             <div class="input__number" >
                                 <div class="input__number_text">Объём двигателя (см3)</div>
-                                <input class="input__number_input" type="number" name=""required>
+                                <input class="input__number_input" type="number" name="engine_car"required>
                             </div>
                         </div>
                         <div class="avto__none" id="busInput">
                             <div class="input__number" >
                                 <div class="input__number_text">Количество мест</div>
-                                <input class="input__number_input" type="number" name=""required>
+                                <input class="input__number_input" type="number" name="seats"required>
                             </div>
                         </div>
                         <div class="avto__none" id="tractorInput">
                             <div class="input__number" >
                                 <div class="input__number_text">Мощность двигателя</div>
-                                <input class="input__number_input" type="number" name=""required>
+                                <input class="input__number_input" type="number" name="engine_tractor"required>
                             </div>
                         </div>
                         <div class="avto__none" id="cargoInput">
                             <div class="input__number" >
                                 <div class="input__number_text">Общая масса</div>
-                                <input  class="input__number_input" type="number" name=""required>
+                                <input  class="input__number_input" type="number" name="weight"required>
                             </div>
                         </div>
                         <div class="avto__none" id="bikeInput">
                             <div class="input__number" >
                                 <div class="input__number_text">Объём двигателя (см3)</div>
-                                <input  class="input__number_input" type="number" name=""required>
+                                <input  class="input__number_input" type="number" name="engine_motorbike"required>
                             </div>
                         </div> 
                     </div>
@@ -375,14 +375,14 @@
                         <div class="input">
                             <div class="input__number">
                                 <div class="input__number_text">Опыт вождения владельца:</div>
-                                <select id="age" name="">
+                                <select id="age" name="driver_expirience">
                                     <option value disabled selected>Выберете</option>
                                     <option value="">до 1 года</option>
-                                    <option value="">1 года</option>
-                                    <option value="">2 года</option>
-                                    <option value="">3 года</option>
-                                    <option value="">4 года</option>
-                                    <option value="">5 лет</option>
+                                    <option value="1">1 года</option>
+                                    <option value="2">2 года</option>
+                                    <option value="3">3 года</option>
+                                    <option value="4">4 года</option>
+                                    <option value="5">5 лет</option>
                                 </select>
                             </div>  
                         </div>
@@ -395,12 +395,12 @@
                         <div class="input">
                             <div class="input__number">
                                 <div class="input__number_text">Во скольких ДТП вы виноваты</div>
-                                <select id="DTP" name="">
+                                <select id="DTP" name="dtpCount">
                                     <option value disabled selected>Выберете</option>
-                                    <option value="">0</option>
-                                    <option value="">1</option>
-                                    <option value="">2</option>
-                                    <option value="">3</option>
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
                                     <option value="">3+</option>
                                 </select>
                             </div>  
