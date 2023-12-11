@@ -11,13 +11,18 @@ const inputIdnp = document.getElementById('IDNP');
 const person = document.getElementById('anotherPerson');
 const checkIdnp = document.getElementById('checkIdnp');
 const btnSecond = document.getElementById('btnSecond');
+const DTPnone = document.getElementById('DTPnone');
+const dateNone = document.getElementById('dateNone');
+const srok = document.getElementById('srokNone');
+const ageNone = document.getElementById('ageNone');
+const checkNones = document.getElementById('checkNones');
 
 
 
 function updateButtonState() {
    
 
-    if ((inputPass.value === "" && !checkPass.checked)  || (inputIdnp.value ==="" && !checkIdnp.checked)) {
+    if ((inputIdnp.value ==="" && !checkIdnp.checked) || (inputPass.value === "" && !checkPass.checked) ) {
         btnFirst.disabled = true;
         btnFirst.style.cursor = 'not-allowed';
     } else {
@@ -41,6 +46,9 @@ function updateCountry() {
         countryReg.style.cursor = 'auto';
         countrySelect.style.display = 'block';
         countryReg.style.display = 'none';
+        ageNone.style.display = 'none';
+        DTPnone.style.display = 'none';
+        srok.style.display = 'block';
 
     } else {
         countryReg.disabled = true;
@@ -48,6 +56,8 @@ function updateCountry() {
         countryReg.style.cursor = 'not-allowed';
         countrySelect.style.display = 'none';
         countryReg.style.display = 'block';
+        ageNone.style.display = 'block';
+        DTPnone.style.display = 'block';
     }
 }
 
@@ -61,6 +71,7 @@ function updateElement() {
         inputIdnp.disabled = true;
         inputIdnp.classList.add('disabled'); 
         inputIdnp.style.cursor = 'not-allowed';
+
         
     } else {
         inputIdnp.disabled = false;
@@ -92,6 +103,12 @@ function openAllForm() {
     inputPass.style.cursor = 'not-allowed';  
     imgPass.style.display = 'none';
     checkNone.style.display = 'none';
+
+    inputIdnp.disabled = true;
+    inputIdnp.classList.add('disabled'); 
+    inputIdnp.style.cursor = 'not-allowed';  
+    imgPass.style.display = 'none';
+    checkNones.style.display = 'none';
 
     for (let i = 0; i < allForm.length; i++) {
         allForm[i].style.display = 'block';

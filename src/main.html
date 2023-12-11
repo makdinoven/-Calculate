@@ -19,7 +19,7 @@
                         <div class="input__number">
                             <div class="input__number_text">№ техпаспорта</div>
                             <input id="passport" class="input__number_input" type="number" name="passport" placeholder="Пр. 20003434" required>
-                            <img src="image/UK.jpg" alt="uk" class="input__number_none" id="imgPass">
+                            <img src="image/tehpasport.jpg" alt="uk" class="input__number_none" id="imgPass">
                         </div>
                         <div id="checkNone" class="input__check">
                             <input class="input__check_box" id="checkPass" type="checkbox" onchange="updateButtonState()">
@@ -32,6 +32,7 @@
                                 <div class="input__number_text">место регистрации</div>
                                 <input id="placeReg" class="input__number_input" type="text" name="place_reg" value="MD - Republica Moldova" disabled required>
                                 <select class="avto__select" name="country" id="countrySelect">
+                                    <option value="">MD - Republica Moldova</option>
                                     <option value="">ABW  Аруба</option>
                                     <option value="AFG">Афганистан</option>
                                     <option value="AGO">Ангола</option>
@@ -340,7 +341,7 @@
                         <div class="input__number">
                             <div class="input__number_text">IDNP/IDNO</div>
                             <input id="IDNP" class="input__number_input" type="number" name="IDNP" placeholder="Пр. 2353326463" required>
-                            <img src="image/UK.jpg" alt="uk" class="input__number_none" id="imgIdnp">
+                            <img src="image/IN.png" alt="uk" class="input__number_none" id="imgIdnp">
                         </div>
                         <div id="checkNones" class="input__check">
                             <input class="input__check_box" id="checkIdnp" type="checkbox" onchange="updateButtonState()">
@@ -372,7 +373,7 @@
                             <img class="title_img" src="image/person.png" alt="person">
                             <div class="title_text">Страховые данные</div>
                         </div>
-                        <div class="input">
+                        <div class="input" id="ageNone">
                             <div class="input__number">
                                 <div class="input__number_text">Опыт вождения владельца:</div>
                                 <select id="age" name="e">
@@ -386,13 +387,13 @@
                                 </select>
                             </div>  
                         </div>
-                        <div class="input">
+                        <div class="input" id="date">
                             <div class="input__number">
                                 <div class="input__number_text">Дата активация ОСАГО</div>
                                 <input id="date" class="input__number_input"  type="date">
                             </div>  
                         </div>
-                        <div class="input">
+                        <div class="input" id="DTPnone">
                             <div class="input__number">
                                 <div class="input__number_text">Во скольких ДТП вы виноваты</div>
                                 <select id="DTP" name="g">
@@ -402,6 +403,26 @@
                                     <option value="">2</option>
                                     <option value="">3</option>
                                     <option value="">3+</option>
+                                </select>
+                            </div>  
+                        </div>
+                        <div class="input" id="srokNone" style="display: none;">
+                            <div class="input__number">
+                                <div class="input__number_text">Срок действия страховки</div>
+                                <select id="validly_period" name="g">
+                                    <option value disabled selected>Выберете</option>
+                                    <option value="">1 месяц</option>
+                                    <option value="">2 месяц</option>
+                                    <option value="">3 месяц</option>
+                                    <option value="">4 месяц</option>
+                                    <option value="">5 месяц</option>
+                                    <option value="">6 месяц</option>
+                                    <option value="">7 месяц</option>
+                                    <option value="">8 месяц</option>
+                                    <option value="">9 месяц</option>
+                                    <option value="">10 месяц</option>
+                                    <option value="">11 месяц</option>
+                                    <option value="">12 месяц</option>
                                 </select>
                             </div>  
                         </div>
