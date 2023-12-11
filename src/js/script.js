@@ -19,17 +19,17 @@ const checkNones = document.getElementById('checkNones');
 
 
 
-function updateButtonState() {
+// function updateButtonState() {
    
 
-    if ((inputIdnp.value ==="" && !checkIdnp.checked) || (inputPass.value === "" && !checkPass.checked) ) {
-        btnFirst.disabled = true;
-        btnFirst.style.cursor = 'not-allowed';
-    } else {
-        btnFirst.disabled = false;
-        btnFirst.style.cursor = 'auto'
-    }
-}
+//     if ((inputIdnp.value ==="" && !checkIdnp.checked) || (inputPass.value === "" && !checkPass.checked) ) {
+//         btnFirst.disabled = true;
+//         btnFirst.style.cursor = 'not-allowed';
+//     } else {
+//         btnFirst.disabled = false;
+//         btnFirst.style.cursor = 'auto'
+//     }
+// }
 
 document.getElementById("passport").addEventListener("input", updateButtonState);
 document.getElementById("checkPass").addEventListener("change", updateButtonState);
@@ -518,7 +518,7 @@ function calculate() {
             }
 
             result = step_4;
-            alert(result);
+            btnSecond.textContent = Math.round(result) ;
         }
     }
 
