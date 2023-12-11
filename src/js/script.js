@@ -515,10 +515,10 @@ function calculate() {
 }
 
 // Вот как можно вызвать эту функцию при отправке формы (если у вас есть форма с id="insurance-form"):
-document.getElementById("insurance-form").addEventListener("submit", function (event) {
-    event.preventDefault();
-    calculateInsurance();
-});
+// document.getElementById("insurance-form").addEventListener("submit", function (event) {
+//     event.preventDefault();
+//     calculateInsurance();
+// });
 
 
 
