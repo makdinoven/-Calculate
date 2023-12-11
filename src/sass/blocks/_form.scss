@@ -1,9 +1,13 @@
+body {
+    background: #F5F7FC;
+}
+
 .form {
-    background: #d8cccc;
+    background: #F5F7FC;
     border-radius: 10px;
     padding: 20px;
     &__mini {
-        background: #b6a0db;
+        background: #fff;
         border-radius: 10px;
         padding: 20px;
         margin-bottom: 20px;
