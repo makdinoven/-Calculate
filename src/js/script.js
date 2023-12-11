@@ -165,24 +165,18 @@ function calculate() {
     const CONST = 1350;
     let step_1, step_2, step_3, step_4, step_5, result;
 
-    // Получаем данные из формы
-    const passport = document.getElementById("passport").value;
-    const idnp_idno = document.getElementById("indp_idno").value;
-    const area = document.getElementById("country").value;
+    const area = document.getElementById("placeReg").value;
     const owner = document.getElementById("face").value;
     const registration = "Kishineu"; // По умолчанию
-    const validly_period = document.getElementById("validly_period").value;
-    const transport_class = document.getElementById("transport_class").value;
+    // const validly_period = document.getElementById("validly_period").value;
+    const transport_class = document.getElementById("avtoSelect").value;
     const engine_car = document.getElementById("engine_car").value;
-    const driver_value = document.getElementById("driver_value").value;
-    const driver_expirience = document.getElementById("driver_expirience").value;
-    const number_accisent = document.getElementById("number_accisent").value;
-    const dtpCount = document.getElementById("dtpCount").value;
+    const driver_expirience = document.getElementById("age").value;
+    const dtpCount = document.getElementById("DTP").value;
     const seats = document.getElementById("seats").value;
     const engine_tractor = document.getElementById("engine_tractor").value;
     const engine_motorbike = document.getElementById("engine_motorbike").value;
     const weight = document.getElementById("weight").value;
-
     // Выбор места регистрации
     if (area == "MD") {
         // Неограниченное количество допускаемых
@@ -524,11 +518,11 @@ function calculate() {
             }
 
             result = step_4;
-            console.log(result);
+            alert(result);
         }
     }
 
-    alert('hyu');
+   
 }
 
 // Вот как можно вызвать эту функцию при отправке формы (если у вас есть форма с id="insurance-form"):
