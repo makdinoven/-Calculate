@@ -373,7 +373,7 @@
                             <img class="title_img" src="image/document.png" alt="person">
                             <div class="title_text">Страховые данные</div>
                         </div>
-                        <div class="input">
+                        <div class="input" id="ageNone">
                             <div class="input__number">
                                 <div class="input__number_text">Опыт вождения владельца:</div>
                                 <select id="age" name="e">
@@ -387,13 +387,13 @@
                                 </select>
                             </div>  
                         </div>
-                        <div class="input">
+                        <div class="input" id="dateNone">
                             <div class="input__number">
                                 <div class="input__number_text">Дата активация ОСАГО</div>
                                 <input id="date" class="input__number_input"  type="date">
                             </div>  
                         </div>
-                        <div class="input">
+                        <div class="input" id="DTPnone">
                             <div class="input__number">
                                 <div class="input__number_text">Во скольких ДТП вы виноваты</div>
                                 <select id="DTP" name="g">
@@ -406,28 +406,30 @@
                                 </select>
                             </div>  
                         </div>
+                        <div class="input" id="srokNone" style="display: none;">
+                            <div class="input__number">
+                                <div class="input__number_text">Срок действия страховки</div>
+                                <select id="validly_period" name="g">
+                                    <option value disabled selected>Выберете</option>
+                                    <option value="1">1 месяц</option>
+                                    <option value="2">2 месяц</option>
+                                    <option value="3">3 месяц</option>
+                                    <option value="4">4 месяц</option>
+                                    <option value="5">5 месяц</option>
+                                    <option value="6">6 месяц</option>
+                                    <option value="7">7 месяц</option>
+                                    <option value="8">8 месяц</option>
+                                    <option value="9">9 месяц</option>
+                                    <option value="10">10 месяц</option>
+                                    <option value="11">11 месяц</option>
+                                    <option value="12">12 месяц</option>
+                                </select>
+                            </div>  
+                        </div>
                     </div>
-                </div>
-                <div class="input" id="srokNone" style="display: none;">
-                    <div class="input__number">
-                        <div class="input__number_text">Срок действия страховки</div>
-                        <select id="validly_period" name="g">
-                            <option value disabled selected>Выберете</option>
-                            <option value="1">1 месяц</option>
-                            <option value="2">2 месяц</option>
-                            <option value="3">3 месяц</option>
-                            <option value="4">4 месяц</option>
-                            <option value="5">5 месяц</option>
-                            <option value="6">6 месяц</option>
-                            <option value="7">7 месяц</option>
-                            <option value="8">8 месяц</option>
-                            <option value="9">9 месяц</option>
-                            <option value="10">10 месяц</option>
-                            <option value="11">11 месяц</option>
-                            <option value="12">12 месяц</option>
-                        </select>
-                    </div>  
-                </div>
+                    </div>
+                    
+                
             </div>
                 <button id="btnFirst" class="button" type="button"   onclick="openAllForm()">рассчитать</button>
                 <button id="btnSecond" style="display: none;" class="button"  onclick="calculate()">рассчитать</button>

@@ -31,10 +31,10 @@ const checkNones = document.getElementById('checkNones');
 //     }
 // }
 
-document.getElementById("passport").addEventListener("input", updateButtonState);
-document.getElementById("checkPass").addEventListener("change", updateButtonState);
-document.getElementById('IDNP').addEventListener('inputs', updateButtonState);
-document.getElementById('checkIdnp').addEventListener('changes', updateButtonState);
+// document.getElementById("passport").addEventListener("input", updateButtonState);
+// document.getElementById("checkPass").addEventListener("change", updateButtonState);
+// document.getElementById('IDNP').addEventListener('inputs', updateButtonState);
+// document.getElementById('checkIdnp').addEventListener('changes', updateButtonState);
 
 checkCountry.addEventListener('change', updateCountry);
 countryReg.addEventListener('input', updateCountry);
